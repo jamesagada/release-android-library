@@ -23,7 +23,7 @@ task androidSourcesJar(type: Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.srcDirs
 }
-/*
+
 uploadArchives {
     repositories.mavenDeployer {
         pom.groupId = groupId
@@ -33,7 +33,7 @@ uploadArchives {
         repository(url: "file://${localReleaseDest}")
     }
 }
-*/
+
 task zipRelease(type: Zip) {
     from localReleaseDest
     destinationDir buildDir
